@@ -1,0 +1,269 @@
+body {
+  background: linear-gradient(#F5F5FA, #F2DAD5, #A0ABD6);
+  font-family: 'Poppins', sans-serif!important;
+  margin: 0;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 28px 50px;
+  .header__button {
+    background-color: #BB6BD9;
+    color: #FFFFFF;
+    border-radius: 25px;
+    border: none;
+    height: 38px;
+    width: 124px;
+  }
+}
+.plans {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 120px;
+  .plans__title {
+    font-size: 35px;
+    color: #231D4F;
+    margin-bottom: 50px;
+  }
+  .plans__subTitle {
+    display: flex;
+    flex-direction: row;
+    .plan {
+      margin-right: 146px;
+    }
+  }
+  .switch-button {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    overflow: hidden;
+    width: 220px;
+    height: 38px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    position: relative;
+    padding-right: 120px;
+
+    &:before {
+      content: "YEARLY";
+      font-size: 12px;
+      position: absolute;
+      color: #FFFFFF;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    &-checkbox {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 2;
+
+      &:checked + .switch-button-label:before {
+        transform: translateX(120px);
+        transition: transform 300ms linear;
+      }
+
+      & + .switch-button-label {
+        position: relative;
+        padding: 10px 0;
+        width: 180px;
+        display: block;
+        user-select: none;
+        pointer-events: none;
+
+        &:before {
+          content: "";
+          background: #BB6BD9;
+          height: 38px;
+          width: 180px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          border-radius: 30px;
+          transform: translateX(0);
+          transition: transform 300ms;
+        }
+
+        .switch-button-label-span {
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px 120px;
+  background-color: rgba(255, 255, 255, 0.64);
+  border-radius: 26px;
+  border: none;
+  padding: 20px 68px;
+  .card {
+    width: 200px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
+  .card_price {
+    margin-bottom: 20px;
+    .card_price-amount {
+      color: #231D4F;
+      font-size: 36px;
+      font-weight: 700;
+    }
+    .card_price-month {
+      color: #848199;
+      font-size: 17px;
+    }
+  }
+  .card_info {
+    display: flex;
+    flex-direction: column;
+    .card_info__title {
+      color: #231D4F;
+      font-size: 28px;
+    }
+    .card_info__subtitle {
+      color: #848199;
+      font-size: 15px;
+    }
+    .card_info__list {
+      padding: 0;
+      .card_info__list-elem {
+        display: flex;
+        list-style: none;
+        margin-bottom: 8px;
+        .card_info__list-elem-icon {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .card_btn {
+    height: 45px;
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #231D4F;
+    border: none;
+    border-radius: 24px;
+  }
+
+  .popularPlanCard {
+    position: relative;
+    top: -50px;
+    height: 530px;
+    background-color: #231D4F;
+    padding: 20px 30px;
+    border-radius: 26px;
+    border: none;
+    color: #FFFFFF;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    filter: drop-shadow(0 42px 34px rgba(82, 67, 194, 0.2958));
+  }
+  .popularPlanCard_label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    text-transform: uppercase;
+    background-color: #403879;
+    color: #BB6BD9;
+    border: none;
+    border-radius: 13.5px;
+    height: 27px;
+    width: 120px;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .popularPlanCard_price {
+    margin-bottom: 20px;
+    .popularPlanCard_price-amount {
+      font-size: 36px;
+      font-weight: 700;
+    }
+    .popularPlanCard_price-month {
+      font-size: 17px;
+    }
+  }
+  .popularPlanCard_info {
+    display: flex;
+    flex-direction: column;
+    .popularPlanCard_info__title {
+      font-size: 28px;
+    }
+    .popularPlanCard_info__subtitle {
+      font-size: 15px;
+    }
+    .popularPlanCard_info__list {
+      padding: 0;
+      .popularPlanCard_info__list-elem {
+        display: flex;
+        list-style: none;
+        margin-bottom: 8px;
+        .popularPlanCard_info__list-elem-icon {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .popularPlanCard_btn {
+    height: 45px;
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #BB6BD9;
+    border: none;
+    border-radius: 24px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .plans__subTitle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .plan {
+      margin-right: 0 !important;
+      margin-bottom: 10px;
+    }
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    .card {
+      height: auto;
+    }
+    .popularPlanCard {
+      position: static;
+    }
+  }
+}
